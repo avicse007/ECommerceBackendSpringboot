@@ -1,0 +1,521 @@
+{
+	"info": {
+		"_postman_id": "e110b76d-a55a-4781-9114-065564eed3da",
+		"name": "ECommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "6277639"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "add Products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Watch\",\n    \"brand\":\"One plus\",\n    \"price\": \"700000\",\n    \"inventory\":20,\n    \"productDescription\": \"One plus Smart watches\",\n    \"category\": \"Gadgets\"\n\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9193/api/v1/product/add"
+					},
+					"response": []
+				},
+				{
+					"name": "get all products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9193/api/v1/product/all"
+					},
+					"response": []
+				},
+				{
+					"name": "get all products by Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9193/api/v1/product/category-name/Electronics"
+					},
+					"response": []
+				},
+				{
+					"name": "get all products by brand",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9193/api/v1/product/brand-name/Apple"
+					},
+					"response": []
+				},
+				{
+					"name": "get all products by Category and Brand",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9193/api/v1/product/category-name-brand/Electronics/Apple"
+					},
+					"response": []
+				},
+				{
+					"name": "getProductById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9193/api/v1/product/1"
+					},
+					"response": []
+				},
+				{
+					"name": "get count by brand and name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9193/api/v1/product/brand-name/Apple/name/TV/count"
+					},
+					"response": []
+				},
+				{
+					"name": "get all products by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9193/api/v1/product/name/TV"
+					},
+					"response": []
+				},
+				{
+					"name": "get all products by brand and name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9193/api/v1/product/brand-name/Apple/name/TV"
+					},
+					"response": []
+				},
+				{
+					"name": "Update product by Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"TV\",\n    \"brand\":\"Apple\",\n    \"price\": \"700000\",\n    \"inventory\":300,\n    \"productDescription\": \"Apple Smart TV\",\n    \"category\": \"Electronics\"\n\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9193/api/v1/product/update/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "get all categories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9193/api/v1/category/categories"
+					},
+					"response": []
+				},
+				{
+					"name": "add category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Fashion\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9193/api/v1/category/add"
+					},
+					"response": []
+				},
+				{
+					"name": "get category by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9193/api/v1/category/category/1"
+					},
+					"response": []
+				},
+				{
+					"name": "get category by category name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9193/api/v1/category/category/name/Electronics"
+					},
+					"response": []
+				},
+				{
+					"name": "delete category by category id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9193/api/v1/category/category/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Image",
+			"item": [
+				{
+					"name": "Upload image with product id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/Users/avkumars/Desktop/ScreenShots/Image1.png"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/Users/avkumars/Desktop/ScreenShots/Image2.png"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/Users/avkumars/Desktop/ScreenShots/Image3.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9193/api/v1/images/upload?productId=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9193",
+							"path": [
+								"api",
+								"v1",
+								"images",
+								"upload"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "download image with image id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://localhost:9193/api/v1/images/image/download/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete image with image id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://localhost:9193/api/v1/images/image/delete/1"
+					},
+					"response": []
+				},
+				{
+					"name": "update image with image id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/Users/avkumars/Desktop/ScreenShots/Image3.png"
+								}
+							]
+						},
+						"url": "http://localhost:9193/api/v1/images/image/update/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cart-item",
+			"item": [
+				{
+					"name": "Update Cart-Item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9193/api/v1/cart-items/item/update/5/1?quantity=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9193",
+							"path": [
+								"api",
+								"v1",
+								"cart-items",
+								"item",
+								"update",
+								"5",
+								"1"
+							],
+							"query": [
+								{
+									"key": "quantity",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Cart-Item",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMUBlbWFpbC5jb20iLCJpZCI6MSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTczNTQ5MjYxOCwiZXhwIjoxNzM1NDk2MjE4fQ.Q7pExAAZC9fDX2Xbfqp8BiukhD_oXXxk4KdGqC7_ydmH6_c457zqLj5HLfA9442AGDgZpOxj1e-6S5koE8GuRA"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9193/api/v1/cart-items/item/add?productId=3&quantity=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9193",
+							"path": [
+								"api",
+								"v1",
+								"cart-items",
+								"item",
+								"add"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "3"
+								},
+								{
+									"key": "quantity",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cart-Item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:9193/api/v1/cart-items/item/remove/2/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "get Cart By Cart id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9193/api/v1/carts/1"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete cart by cart id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:9193/api/v1/carts/2/clear"
+					},
+					"response": []
+				},
+				{
+					"name": "get cart total by cart id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9193/api/v1/carts/5/cart/total"
+					},
+					"response": []
+				},
+				{
+					"name": "get Cart total By Cart id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9193/api/v1/carts/6/cart/total"
+					},
+					"response": []
+				},
+				{
+					"name": "Clear Cart total By Cart id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:9193/api/v1/carts/6/clear"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "get user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9193/api/v1/users/user/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "create order by user id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:9193/api/v1/orders/order/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"admin1@email.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9193/api/v1/auth/login"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
